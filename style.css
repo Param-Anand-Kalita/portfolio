@@ -78,8 +78,7 @@ header {
 
 
 .logo span,
-.eyebrow,
-.timeline-item .eyebrow {
+.eyebrow {
     color: var(--accent);
 }
 
@@ -559,7 +558,7 @@ main {
 
 
 /* =========================
-   RESUME BLOCKS
+   RESUME
 ========================= */
 
 .resume-card-grid {
@@ -590,153 +589,32 @@ main {
 }
 
 
-.project-card {
+.resume-project-grid .card {
     height: 100%;
-
-    display: flex;
-
-    flex-direction: column;
 }
 
 
-.project-card > p:not(.eyebrow) {
-    margin-bottom: 18px;
+.resume-project-grid .card p {
+    margin-top: 5px;
 }
 
 
-.project-card .tags {
-    margin-top: auto;
-}
-
-
-.resume-language-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-
-.resume-language-grid .card {
-    text-align: center;
-
-    font-weight: 700;
-}
-
-
-/* =========================
-   TAGS
-========================= */
-
-.tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-}
-
-
-.tags span {
-    background: var(--soft);
-
-    color: var(--accent-dark);
-
-    padding: 6px 10px;
-
-    border-radius: 7px;
-
-    font-size: 0.82rem;
-
-    font-weight: 700;
-}
-
-
-/* =========================
-   OLD RESUME CLASSES
-========================= */
-
-.resume-layout {
-    display: grid;
-
-    grid-template-columns: 320px 1fr;
-
-    gap: 50px;
-}
-
-
-.resume-sidebar {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-}
-
-
-.clean-list {
-    list-style: none;
+.resume-list {
+    padding-left: 22px;
 
     color: var(--muted);
 }
 
 
-.clean-list li {
-    padding: 7px 0;
+.resume-list li {
+    margin-bottom: 8px;
 
-    border-bottom: 1px solid var(--line);
+    padding-left: 5px;
 }
 
 
-.resume-main {
-    border-left: 2px solid var(--line);
-
-    padding-left: 34px;
-}
-
-
-.timeline-item {
-    position: relative;
-
-    padding: 0 0 45px;
-}
-
-
-.timeline-dot {
-    width: 13px;
-    height: 13px;
-
-    border-radius: 50%;
-
-    background: var(--accent);
-
-    position: absolute;
-
-    left: -41px;
-
-    top: 7px;
-
-    border: 3px solid var(--bg);
-}
-
-
-.timeline-item h2 {
-    font-size: 1.35rem;
-
-    margin-bottom: 3px;
-}
-
-
-.timeline-item p {
-    color: var(--muted);
-}
-
-
-.timeline-item .muted {
-    font-size: 0.9rem;
-
-    margin-bottom: 10px;
+.resume-list li::marker {
+    color: var(--accent);
 }
 
 
@@ -917,15 +795,13 @@ footer {
     .hero,
     .grid.two,
     .grid.three,
-    .resume-layout,
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
 
     .resume-card-grid,
-    .resume-project-grid,
-    .resume-language-grid {
+    .resume-project-grid {
         grid-template-columns: 1fr;
     }
 
@@ -954,18 +830,6 @@ footer {
 
     .section-inner {
         width: 100%;
-    }
-
-
-    .resume-main {
-        border-left: 0;
-
-        padding-left: 20px;
-    }
-
-
-    .timeline-dot {
-        left: -27px;
     }
 
 
