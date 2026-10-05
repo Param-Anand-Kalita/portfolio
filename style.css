@@ -787,4 +787,18 @@ footer {
         grid-column: auto;
     }
 
+    .strength-list {
+    padding-left: 22px;
+    color: var(--muted);
+    }
+
+  .strength-list li {
+      margin-bottom: 10px;
+      padding-left: 5px;
+  }
+
+  .strength-list li::marker {
+      color: var(--accent);
+  }
+
 }
