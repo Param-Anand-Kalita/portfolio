@@ -41,7 +41,6 @@ header {
     border-bottom: 1px solid var(--line);
 
     position: sticky;
-
     top: 0;
 
     z-index: 10;
@@ -78,7 +77,9 @@ header {
 }
 
 
-.logo span {
+.logo span,
+.eyebrow,
+.timeline-item .eyebrow {
     color: var(--accent);
 }
 
@@ -127,185 +128,55 @@ header {
 ========================= */
 
 main {
-    min-height: calc(100vh - 145px);
+    min-height: calc(100vh - 140px);
 }
 
 
 /* =========================
-   HOME PAGE
+   HOME HERO
 ========================= */
 
-.home-profile {
-    min-height: calc(100vh - 145px);
+.hero {
+    max-width: 1120px;
 
-    display: flex;
+    margin: auto;
+
+    padding: 90px 24px;
+
+    display: grid;
+
+    grid-template-columns: 1.35fr 0.65fr;
+
+    gap: 70px;
 
     align-items: center;
 
-    justify-content: center;
-
-    padding: 55px 24px;
+    min-height: calc(100vh - 72px);
 }
 
 
-.home-card {
-    width: 100%;
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 5.7rem);
 
-    max-width: 950px;
+    line-height: 0.98;
 
-    background: var(--surface);
+    letter-spacing: -3px;
 
-    border: 1px solid var(--line);
-
-    border-radius: 22px;
-
-    padding: 55px 70px;
-
-    text-align: center;
-
-    box-shadow: var(--shadow);
+    margin: 12px 0 24px;
 }
 
 
-/* =========================
-   HOME PHOTO
-========================= */
-
-.home-photo {
-    width: 170px;
-
-    height: 170px;
-
-    margin: 0 auto 28px;
-
-    border-radius: 50%;
-
-    overflow: hidden;
-
-    border: 6px solid white;
-
-    box-shadow: 0 12px 35px rgba(24, 38, 72, 0.15);
-
-    background: var(--soft);
-}
-
-
-.home-photo img {
-    display: block;
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    object-position: center;
-
-    border-radius: 50%;
-}
-
-
-/* =========================
-   HOME TEXT
-========================= */
-
-.home-eyebrow {
+.hero h1 span {
     color: var(--accent);
-
-    text-transform: uppercase;
-
-    letter-spacing: 3px;
-
-    font-size: 0.85rem;
-
-    font-weight: 800;
-
-    margin-bottom: 10px;
 }
 
 
-.home-card h1 {
-    font-size: clamp(3rem, 6vw, 4.8rem);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 22px;
-}
-
-
-.home-intro {
-    max-width: 760px;
-
-    margin: 0 auto;
+.intro {
+    max-width: 620px;
 
     color: var(--muted);
 
-    font-size: 1.15rem;
-
-    line-height: 1.8;
-}
-
-
-/* =========================
-   HOME INFORMATION
-========================= */
-
-.home-info {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    margin: 42px auto 0;
-
-    max-width: 850px;
-
-    border-top: 1px solid var(--line);
-
-    border-bottom: 1px solid var(--line);
-}
-
-
-.home-info div {
-    padding: 20px 24px;
-
-    min-height: 105px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-
-.home-info div + div {
-    border-left: 1px solid var(--line);
-}
-
-
-.home-info span {
-    display: block;
-
-    color: var(--muted);
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    font-size: 0.75rem;
-
-    font-weight: 800;
-
-    margin-bottom: 7px;
-}
-
-
-.home-info strong {
-    font-size: 0.95rem;
-
-    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 
@@ -313,21 +184,19 @@ main {
    BUTTONS
 ========================= */
 
-.home-buttons {
+.buttons {
     display: flex;
-
-    justify-content: center;
 
     gap: 14px;
 
-    margin-top: 32px;
+    margin-top: 30px;
 }
 
 
 .btn {
     display: inline-block;
 
-    padding: 12px 22px;
+    padding: 12px 20px;
 
     border-radius: 9px;
 
@@ -372,7 +241,7 @@ main {
 
 
 /* =========================
-   GENERAL CARDS
+   CARDS
 ========================= */
 
 .profile-card,
@@ -396,7 +265,6 @@ main {
 
 .avatar {
     width: 125px;
-
     height: 125px;
 
     border-radius: 50%;
@@ -565,6 +433,85 @@ main {
 
 
 /* =========================
+   EDUCATION TABLE
+========================= */
+
+.education-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.education-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 750px;
+}
+
+
+.education-table th,
+.education-table td {
+    padding: 18px 20px;
+
+    text-align: left;
+
+    border-bottom: 1px solid var(--line);
+
+    vertical-align: top;
+}
+
+
+.education-table th {
+    background: var(--soft);
+
+    color: var(--text);
+
+    font-weight: 700;
+}
+
+
+.education-table td {
+    color: var(--muted);
+}
+
+
+.education-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+.education-table th:nth-child(1) {
+    width: 25%;
+}
+
+
+.education-table th:nth-child(2) {
+    width: 40%;
+}
+
+
+.education-table th:nth-child(3) {
+    width: 18%;
+}
+
+
+.education-table th:nth-child(4) {
+    width: 17%;
+}
+
+
+/* =========================
    PAGE BANNER
 ========================= */
 
@@ -615,22 +562,43 @@ main {
 
 
 /* =========================
+   RESUME SKILLS
+========================= */
+
+.skill-list {
+    padding-left: 24px;
+
+    color: var(--muted);
+}
+
+
+.skill-list li {
+    padding: 8px 0;
+}
+
+
+.skill-list li::marker {
+    color: var(--accent);
+}
+
+
+/* =========================
    RESUME
 ========================= */
 
 .resume-layout {
     display: grid;
 
-    grid-template-columns: 1fr;
+    grid-template-columns: 320px 1fr;
 
-    gap: 30px;
+    gap: 50px;
 }
 
 
 .resume-sidebar {
-    display: grid;
+    display: flex;
 
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
 
     gap: 20px;
 }
@@ -675,20 +643,21 @@ main {
 
 
 .resume-main {
-    padding: 0;
+    border-left: 2px solid var(--line);
+
+    padding-left: 34px;
 }
 
 
 .timeline-item {
     position: relative;
 
-    padding: 0 0 35px;
+    padding: 0 0 45px;
 }
 
 
 .timeline-dot {
     width: 13px;
-
     height: 13px;
 
     border-radius: 50%;
@@ -697,7 +666,7 @@ main {
 
     position: absolute;
 
-    left: -20px;
+    left: -41px;
 
     top: 7px;
 
@@ -858,7 +827,6 @@ footer {
         position: absolute;
 
         left: 0;
-
         right: 0;
 
         top: 72px;
@@ -887,81 +855,24 @@ footer {
     }
 
 
+    .hero,
     .grid.two,
     .grid.three,
-    .contact-grid,
-    .resume-sidebar {
+    .resume-layout,
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* HOME MOBILE */
+    .hero {
+        padding-top: 55px;
 
-    .home-profile {
         min-height: auto;
-
-        padding: 35px 16px;
     }
 
 
-    .home-card {
-        padding: 40px 22px;
-
-        border-radius: 18px;
-    }
-
-
-    .home-photo {
-        width: 140px;
-
-        height: 140px;
-    }
-
-
-    .home-card h1 {
-        font-size: 2.7rem;
-
-        letter-spacing: -1px;
-    }
-
-
-    .home-intro {
-        font-size: 1rem;
-    }
-
-
-    .home-info {
-        grid-template-columns: 1fr;
-
-        margin-top: 30px;
-    }
-
-
-    .home-info div {
-        min-height: auto;
-
-        padding: 17px 15px;
-    }
-
-
-    .home-info div + div {
-        border-left: 0;
-
-        border-top: 1px solid var(--line);
-    }
-
-
-    .home-buttons {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-
-    .home-buttons .btn {
-        width: 100%;
-
-        text-align: center;
+    .hero h1 {
+        letter-spacing: -2px;
     }
 
 
@@ -999,6 +910,11 @@ footer {
 
     .details div:nth-child(odd) {
         border-right: 0;
+    }
+
+
+    .education-table {
+        min-width: 700px;
     }
 
 }
