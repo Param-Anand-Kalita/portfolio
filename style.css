@@ -513,7 +513,7 @@ main {
 ========================= */
 
 .page-banner {
-    padding: 75px 24px;
+    padding: 55px 24px;
 
     text-align: center;
 
@@ -559,26 +559,75 @@ main {
 
 
 /* =========================
-   RESUME
+   RESUME BLOCKS
 ========================= */
 
-.resume-layout {
+.resume-card-grid {
     display: grid;
 
-    grid-template-columns: 320px 1fr;
-
-    gap: 50px;
-}
-
-
-.resume-sidebar {
-    display: flex;
-
-    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
 }
 
+
+.resume-card-grid .card {
+    height: 100%;
+}
+
+
+.resume-card-grid .card p:not(.eyebrow) {
+    margin-bottom: 5px;
+}
+
+
+.resume-project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.project-card {
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.project-card > p:not(.eyebrow) {
+    margin-bottom: 18px;
+}
+
+
+.project-card .tags {
+    margin-top: auto;
+}
+
+
+.resume-language-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.resume-language-grid .card {
+    text-align: center;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   TAGS
+========================= */
 
 .tags {
     display: flex;
@@ -601,6 +650,28 @@ main {
     font-size: 0.82rem;
 
     font-weight: 700;
+}
+
+
+/* =========================
+   OLD RESUME CLASSES
+========================= */
+
+.resume-layout {
+    display: grid;
+
+    grid-template-columns: 320px 1fr;
+
+    gap: 50px;
+}
+
+
+.resume-sidebar {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
 }
 
 
@@ -708,6 +779,18 @@ main {
     color: var(--muted);
 
     font-size: 0.8rem;
+}
+
+
+.contact-row a {
+    color: var(--text);
+
+    text-decoration: none;
+}
+
+
+.contact-row a:hover {
+    color: var(--accent);
 }
 
 
@@ -836,6 +919,13 @@ footer {
     .grid.three,
     .resume-layout,
     .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .resume-card-grid,
+    .resume-project-grid,
+    .resume-language-grid {
         grid-template-columns: 1fr;
     }
 
