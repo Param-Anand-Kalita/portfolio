@@ -351,12 +351,6 @@ main {
 }
 
 
-/*
-   Alternate sections use full-width
-   background while keeping their content
-   aligned with normal sections.
-*/
-
 .section.alt {
     max-width: none;
 
@@ -448,6 +442,69 @@ main {
     font-size: 0.82rem;
 
     margin-bottom: 3px;
+}
+
+
+/* =========================
+   EDUCATION TABLE
+========================= */
+
+.education-table-wrapper {
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 38px;
+
+    box-shadow: var(--shadow);
+
+    overflow-x: auto;
+}
+
+
+.education-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+
+    font-size: 1rem;
+}
+
+
+.education-table th,
+.education-table td {
+    border: 1px solid #c9ced7;
+
+    padding: 20px 18px;
+
+    text-align: left;
+
+    vertical-align: middle;
+}
+
+
+.education-table th {
+    background: #e7ebf2;
+
+    color: #172033;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+}
+
+
+.education-table td {
+    background: #ffffff;
+
+    color: #172033;
+}
+
+
+.education-table tbody tr:hover td {
+    background: #f8f9fc;
 }
 
 
@@ -829,6 +886,18 @@ footer {
 
     .details div:nth-child(odd) {
         border-right: 0;
+    }
+
+
+    .education-table-wrapper {
+        padding: 20px;
+
+        border-radius: 14px;
+    }
+
+
+    .education-table {
+        min-width: 800px;
     }
 
 }
