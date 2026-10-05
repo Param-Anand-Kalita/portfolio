@@ -4,36 +4,15 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Param Kalita | Contact</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <style>
-
-        /* Contact page only */
-
-        .contact-info h2,
-        #contactForm h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 24px;
-        }
-
-        footer p {
-            font-size: 0.85rem;
-        }
-
-    </style>
-
 </head>
 
-
 <body>
-
 
     <!-- =========================
          NAVIGATION
@@ -47,11 +26,9 @@
                 My Resume
             </a>
 
-
             <button class="menu-btn" aria-label="Toggle menu">
                 ☰
             </button>
-
 
             <ul class="nav-links">
 
@@ -61,20 +38,17 @@
                     </a>
                 </li>
 
-
                 <li>
                     <a href="resume.html">
                         Resume
                     </a>
                 </li>
 
-
                 <li>
                     <a href="bio-data.html">
                         Bio-data
                     </a>
                 </li>
-
 
                 <li>
                     <a class="active" href="contact.html">
@@ -91,42 +65,28 @@
 
     <main>
 
-
         <!-- =========================
-             PAGE BANNER
+             CONTACT PAGE TITLE
         ========================== -->
 
         <section class="page-banner">
-
-            <p class="eyebrow">
-                Get In Touch
-            </p>
-
 
             <h1>
                 Contact
             </h1>
 
-
-            <p>
-                Feel free to reach out for opportunities, projects or collaboration.
-            </p>
-
         </section>
 
 
         <!-- =========================
-             CONTACT SECTION
+             CONTACT CONTENT
         ========================== -->
 
         <section class="section">
 
             <div class="contact-grid">
 
-
-                <!-- =========================
-                     CONTACT DETAILS
-                ========================== -->
+                <!-- CONTACT DETAILS -->
 
                 <div class="card contact-info">
 
@@ -142,7 +102,9 @@
                         </span>
 
                         <strong>
-                            kalitaparam@gmail.com
+                            <a href="mailto:kalitaparam@gmail.com">
+                                kalitaparam@gmail.com
+                            </a>
                         </strong>
 
                     </div>
@@ -155,7 +117,9 @@
                         </span>
 
                         <strong>
-                            +91 8473856011
+                            <a href="tel:+918473856011">
+                                +91 8473856011
+                            </a>
                         </strong>
 
                     </div>
@@ -168,7 +132,7 @@
                         </span>
 
                         <strong>
-                            J P Nagar 8th Phase, Bengaluru, Karnataka
+                            JP Nagar (8th Phase), Bengaluru, Karnataka
                         </strong>
 
                     </div>
@@ -181,7 +145,12 @@
                         </span>
 
                         <strong>
-                            linkedin.com/in/param-kalita-2809b3328
+                            <a
+                                href="https://www.linkedin.com/in/param-kalita-2809b3328"
+                                target="_blank"
+                            >
+                                linkedin.com/in/param-kalita-2809b3328
+                            </a>
                         </strong>
 
                     </div>
@@ -194,7 +163,12 @@
                         </span>
 
                         <strong>
-                            github.com/Param-Anand-Kalita
+                            <a
+                                href="https://github.com/Param-Anand-Kalita"
+                                target="_blank"
+                            >
+                                github.com/Param-Anand-Kalita
+                            </a>
                         </strong>
 
                     </div>
@@ -202,89 +176,78 @@
                 </div>
 
 
-                <!-- =========================
-                     MESSAGE FORM
-                ========================== -->
+                <!-- CONTACT FORM -->
 
-                <form id="contactForm" class="card">
+                <div class="card">
 
                     <h2>
                         Message
                     </h2>
 
 
-                    <label for="name">
-                        Name
-                    </label>
+                    <form id="contactForm">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                        <small class="error" id="nameError"></small>
 
 
-                    <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        placeholder="Your name"
-                    >
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your email"
+                            required
+                        >
+
+                        <small class="error" id="emailError"></small>
 
 
-                    <small
-                        class="error"
-                        id="nameError">
-                    </small>
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Your message"
+                            required
+                        ></textarea>
+
+                        <small class="error" id="messageError"></small>
 
 
-                    <label for="email">
-                        Email
-                    </label>
+                        <button
+                            type="submit"
+                            class="btn primary full"
+                        >
+                            Send Message
+                        </button>
 
 
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Your email"
-                    >
+                        <p
+                            id="successMessage"
+                            class="success"
+                        ></p>
 
+                    </form>
 
-                    <small
-                        class="error"
-                        id="emailError">
-                    </small>
-
-
-                    <label for="message">
-                        Message
-                    </label>
-
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="7"
-                        placeholder="Your message">
-                    </textarea>
-
-
-                    <small
-                        class="error"
-                        id="messageError">
-                    </small>
-
-
-                    <button
-                        class="btn primary full"
-                        type="submit">
-
-                        Send Message
-
-                    </button>
-
-
-                    <p
-                        id="successMessage"
-                        class="success">
-                    </p>
-
-                </form>
+                </div>
 
             </div>
 
@@ -300,8 +263,7 @@
     <footer>
 
         <p>
-            Param Kalita | Resume Website |
-            <span id="year"></span>
+            Param Kalita | Resume Website | <span id="year"></span>
         </p>
 
     </footer>
