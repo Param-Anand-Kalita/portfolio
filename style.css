@@ -32,7 +32,7 @@ body {
 
 
 /* =========================
-   HEADER / NAVIGATION
+   HEADER
 ========================= */
 
 header {
@@ -129,7 +129,7 @@ main {
 
 
 /* =========================
-   HOME HERO
+   HOME
 ========================= */
 
 .hero {
@@ -392,7 +392,7 @@ main {
 
 
 /* =========================
-   BIO-DATA
+   BIO-DATA DETAILS
 ========================= */
 
 .details {
@@ -430,6 +430,12 @@ main {
     font-size: 0.82rem;
 
     margin-bottom: 3px;
+}
+
+
+/* Address spans both columns on desktop */
+.full-detail {
+    grid-column: 1 / -1;
 }
 
 
@@ -689,7 +695,7 @@ footer {
 
 
 /* =========================
-   RESPONSIVE
+   MOBILE
 ========================= */
 
 @media (max-width: 800px) {
@@ -773,6 +779,12 @@ footer {
 
     .details div:nth-child(odd) {
         border-right: 0;
+    }
+
+
+    /* Address becomes a normal single-column item on mobile */
+    .full-detail {
+        grid-column: auto;
     }
 
 }

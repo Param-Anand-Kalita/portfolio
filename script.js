@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-
-    /* =========================
-       CURRENT YEAR
-    ========================= */
+    /* Current year */
 
     const year = document.getElementById("year");
 
@@ -12,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================
-       MOBILE NAVIGATION
-    ========================= */
+    /* Mobile navigation */
 
     const menuButton =
         document.querySelector(".menu-btn");
@@ -34,9 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================
-       CONTACT FORM VALIDATION
-    ========================= */
+    /* Contact form validation */
 
     const contactForm =
         document.getElementById("contactForm");
@@ -49,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
 
 
-            // Clear previous errors
+            /* Clear previous errors */
 
             document.querySelectorAll(".error").forEach(function (error) {
 
@@ -61,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("successMessage").textContent = "";
 
 
-            // Get input values
+            /* Get input values */
 
             const name =
                 document.getElementById("name").value.trim();
@@ -73,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("message").value.trim();
 
 
-            // Email validation pattern
+            /* Email validation */
 
             const emailPattern =
                 /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -82,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let valid = true;
 
 
-            // Validate name
+            /* Validate name */
 
             if (name.length < 2) {
 
@@ -94,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            // Validate email
+            /* Validate email */
 
             if (!emailPattern.test(email)) {
 
@@ -106,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            // Validate message
+            /* Validate message */
 
             if (message.length < 10) {
 
@@ -118,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            // If all details are valid
+            /* Success */
 
             if (valid) {
 
