@@ -32,11 +32,12 @@ body {
 
 
 /* =========================
-   HEADER
+   HEADER / NAVIGATION
 ========================= */
 
 header {
     background: rgba(255, 255, 255, 0.95);
+
     border-bottom: 1px solid var(--line);
 
     position: sticky;
@@ -50,6 +51,7 @@ header {
 
 .navbar {
     max-width: 1120px;
+
     margin: auto;
 
     min-height: 72px;
@@ -57,7 +59,9 @@ header {
     padding: 0 24px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
@@ -129,7 +133,7 @@ main {
 
 
 /* =========================
-   HOME
+   HOME HERO
 ========================= */
 
 .hero {
@@ -281,6 +285,7 @@ main {
     margin: 0 auto 20px;
 
     display: grid;
+
     place-items: center;
 
     background: var(--soft);
@@ -346,14 +351,27 @@ main {
 }
 
 
+/*
+   Alternate sections use full-width
+   background while keeping their content
+   aligned with normal sections.
+*/
+
 .section.alt {
     max-width: none;
 
-    padding-left: max(24px, calc((100% - 1120px) / 2));
+    margin: 0;
 
-    padding-right: max(24px, calc((100% - 1120px) / 2));
+    padding: 80px 24px;
 
-    background: #fff;
+    background: #ffffff;
+}
+
+
+.section-inner {
+    max-width: 1072px;
+
+    margin: 0 auto;
 }
 
 
@@ -433,12 +451,6 @@ main {
 }
 
 
-/* Address spans both columns on desktop */
-.full-detail {
-    grid-column: 1 / -1;
-}
-
-
 /* =========================
    PAGE BANNER
 ========================= */
@@ -463,6 +475,29 @@ main {
     color: var(--muted);
 
     margin-top: 8px;
+}
+
+
+/* =========================
+   PERSONAL STRENGTHS
+========================= */
+
+.strength-list {
+    padding-left: 22px;
+
+    color: var(--muted);
+}
+
+
+.strength-list li {
+    margin-bottom: 8px;
+
+    padding-left: 5px;
+}
+
+
+.strength-list li::marker {
+    color: var(--accent);
 }
 
 
@@ -695,7 +730,7 @@ footer {
 
 
 /* =========================
-   MOBILE
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 800px) {
@@ -760,6 +795,21 @@ footer {
     }
 
 
+    .section {
+        padding: 60px 24px;
+    }
+
+
+    .section.alt {
+        padding: 60px 24px;
+    }
+
+
+    .section-inner {
+        width: 100%;
+    }
+
+
     .resume-main {
         border-left: 0;
 
@@ -780,25 +830,5 @@ footer {
     .details div:nth-child(odd) {
         border-right: 0;
     }
-
-
-    /* Address becomes a normal single-column item on mobile */
-    .full-detail {
-        grid-column: auto;
-    }
-
-    .strength-list {
-    padding-left: 22px;
-    color: var(--muted);
-    }
-
-  .strength-list li {
-      margin-bottom: 10px;
-      padding-left: 5px;
-  }
-
-  .strength-list li::marker {
-      color: var(--accent);
-  }
 
 }
