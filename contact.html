@@ -14,7 +14,10 @@
 
 <body>
 
-    <!-- Navigation -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <header>
 
         <nav class="navbar">
@@ -62,40 +65,51 @@
 
     <main>
 
-        <!-- Page Banner -->
+        <!-- =========================
+             PAGE BANNER
+        ========================== -->
+
         <section class="page-banner">
 
             <p class="eyebrow">
-                Get In Touch
+                Get in Touch
             </p>
 
             <h1>
-                Contact Me
+                Contact
             </h1>
 
             <p>
-                Use the form below to send a message.
+                Feel free to reach out for opportunities, projects or collaboration.
             </p>
 
         </section>
 
 
-        <!-- Contact Section -->
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
         <section class="section">
 
             <div class="contact-grid">
 
+                <!-- =========================
+                     CONTACT INFORMATION
+                ========================== -->
 
-                <!-- Contact Information -->
                 <div class="card contact-info">
+
+                    <p class="eyebrow">
+                        Contact Details
+                    </p>
 
                     <h2>
                         Let's Connect
                     </h2>
 
                     <p>
-                        You can replace the contact details below
-                        with your actual details before submission.
+                        You can reach me through any of the contact details below.
                     </p>
 
 
@@ -106,7 +120,9 @@
                         </span>
 
                         <strong>
-                            your-email@example.com
+                            <a href="mailto:kalitaparam@gmail.com">
+                                kalitaparam@gmail.com
+                            </a>
                         </strong>
 
                     </div>
@@ -119,7 +135,9 @@
                         </span>
 
                         <strong>
-                            +91 XXXXX XXXXX
+                            <a href="tel:+918473856011">
+                                +91 8473856011
+                            </a>
                         </strong>
 
                     </div>
@@ -132,7 +150,7 @@
                         </span>
 
                         <strong>
-                            Bengaluru, Karnataka
+                            J P Nagar 8th Phase, Bengaluru, Karnataka
                         </strong>
 
                     </div>
@@ -145,7 +163,12 @@
                         </span>
 
                         <strong>
-                            linkedin.com/in/your-profile
+                            <a
+                                href="https://www.linkedin.com/in/param-kalita-2809b3328"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                linkedin.com/in/param-kalita-2809b3328
+                            </a>
                         </strong>
 
                     </div>
@@ -158,7 +181,12 @@
                         </span>
 
                         <strong>
-                            github.com/your-username
+                            <a
+                                href="https://github.com/Param-Anand-Kalita"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                github.com/Param-Anand-Kalita
+                            </a>
                         </strong>
 
                     </div>
@@ -166,79 +194,83 @@
                 </div>
 
 
-                <!-- Contact Form -->
-                <form id="contactForm" class="card">
+                <!-- =========================
+                     CONTACT FORM
+                ========================== -->
+
+                <div class="card">
+
+                    <p class="eyebrow">
+                        Message
+                    </p>
 
                     <h2>
                         Send a Message
                     </h2>
 
 
-                    <label for="name">
-                        Name
-                    </label>
+                    <form id="contactForm">
 
-                    <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        placeholder="Enter your name"
-                    >
+                        <label for="name">
+                            Name
+                        </label>
 
-                    <small
-                        class="error"
-                        id="nameError">
-                    </small>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                        >
 
-
-                    <label for="email">
-                        Email
-                    </label>
-
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Enter your email"
-                    >
-
-                    <small
-                        class="error"
-                        id="emailError">
-                    </small>
+                        <small class="error" id="nameError"></small>
 
 
-                    <label for="message">
-                        Message
-                    </label>
+                        <label for="email">
+                            Email
+                        </label>
 
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Enter your message"></textarea>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your email"
+                            required
+                        >
 
-                    <small
-                        class="error"
-                        id="messageError">
-                    </small>
-
-
-                    <button
-                        class="btn primary full"
-                        type="submit">
-
-                        Submit
-
-                    </button>
+                        <small class="error" id="emailError"></small>
 
 
-                    <p
-                        id="successMessage"
-                        class="success">
-                    </p>
+                        <label for="message">
+                            Message
+                        </label>
 
-                </form>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Your message"
+                            required
+                        ></textarea>
+
+                        <small class="error" id="messageError"></small>
+
+
+                        <button
+                            type="submit"
+                            class="btn primary full">
+                            Send Message
+                        </button>
+
+
+                        <p
+                            class="success"
+                            id="successMessage">
+                        </p>
+
+                    </form>
+
+                </div>
 
             </div>
 
@@ -247,7 +279,10 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
 
         <p>
