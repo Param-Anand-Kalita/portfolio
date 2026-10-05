@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Display current year in footer
+
+    /* =========================
+       CURRENT YEAR
+    ========================= */
 
     const year = document.getElementById("year");
 
@@ -9,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Mobile navigation
+    /* =========================
+       MOBILE NAVIGATION
+    ========================= */
 
     const menuButton =
         document.querySelector(".menu-btn");
@@ -29,7 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Contact form validation
+    /* =========================
+       CONTACT FORM VALIDATION
+    ========================= */
 
     const contactForm =
         document.getElementById("contactForm");
@@ -42,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
 
 
-            // Clear previous error messages
+            // Clear previous errors
 
             document.querySelectorAll(".error").forEach(function (error) {
 
