@@ -208,7 +208,7 @@ main {
 
 
 .home-profile-card h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2.8rem, 5.5vw, 4rem);
 
     line-height: 1.05;
 
@@ -386,21 +386,6 @@ main {
 }
 
 
-.eyebrow {
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    font-size: 0.78rem;
-
-    font-weight: 800;
-
-    margin-bottom: 8px;
-
-    color: var(--accent);
-}
-
-
 .section-heading h2,
 .card h2,
 .card h3 {
@@ -422,24 +407,6 @@ main {
 
 .grid.three {
     grid-template-columns: repeat(3, 1fr);
-}
-
-
-/* =========================
-   CARDS
-========================= */
-
-.profile-card,
-.card {
-    background: var(--surface);
-
-    border: 1px solid var(--line);
-
-    border-radius: 18px;
-
-    padding: 28px;
-
-    box-shadow: var(--shadow);
 }
 
 
@@ -487,6 +454,71 @@ main {
     font-size: 0.82rem;
 
     margin-bottom: 3px;
+}
+
+
+/* =========================
+   EDUCATION TABLE
+========================= */
+
+.education-table-wrapper {
+    width: 100%;
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 38px;
+
+    box-shadow: var(--shadow);
+
+    overflow-x: auto;
+}
+
+
+.education-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+
+    font-size: 1rem;
+}
+
+
+.education-table th,
+.education-table td {
+    border: 1px solid #c9ced7;
+
+    padding: 20px 18px;
+
+    text-align: left;
+
+    vertical-align: middle;
+}
+
+
+.education-table th {
+    background: #e7ebf2;
+
+    color: #172033;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+}
+
+
+.education-table td {
+    background: #ffffff;
+
+    color: #172033;
+}
+
+
+.education-table tbody tr:hover td {
+    background: #f8f9fc;
 }
 
 
@@ -810,7 +842,7 @@ footer {
 
 
     .home-profile-card h1 {
-        font-size: 2.6rem;
+        font-size: 2.7rem;
 
         letter-spacing: -1px;
     }
