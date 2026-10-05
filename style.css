@@ -41,7 +41,6 @@ header {
     border-bottom: 1px solid var(--line);
 
     position: sticky;
-
     top: 0;
 
     z-index: 10;
@@ -78,7 +77,9 @@ header {
 }
 
 
-.logo span {
+.logo span,
+.eyebrow,
+.timeline-item .eyebrow {
     color: var(--accent);
 }
 
@@ -127,185 +128,7 @@ header {
 ========================= */
 
 main {
-    min-height: calc(100vh - 145px);
-}
-
-
-/* =========================
-   HOME PAGE
-========================= */
-
-.home-profile {
-    min-height: calc(100vh - 145px);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 55px 24px;
-}
-
-
-.home-card {
-    width: 100%;
-
-    max-width: 950px;
-
-    background: var(--surface);
-
-    border: 1px solid var(--line);
-
-    border-radius: 22px;
-
-    padding: 55px 70px;
-
-    text-align: center;
-
-    box-shadow: var(--shadow);
-}
-
-
-/* =========================
-   HOME PHOTO
-========================= */
-
-.home-photo {
-    width: 170px;
-
-    height: 170px;
-
-    margin: 0 auto 28px;
-
-    border-radius: 50%;
-
-    overflow: hidden;
-
-    border: 6px solid white;
-
-    box-shadow: 0 12px 35px rgba(24, 38, 72, 0.15);
-
-    background: var(--soft);
-}
-
-
-.home-photo img {
-    display: block;
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    object-position: center;
-
-    border-radius: 50%;
-}
-
-
-/* =========================
-   HOME TEXT
-========================= */
-
-.home-eyebrow {
-    color: var(--accent);
-
-    text-transform: uppercase;
-
-    letter-spacing: 3px;
-
-    font-size: 0.85rem;
-
-    font-weight: 800;
-
-    margin-bottom: 10px;
-}
-
-
-.home-card h1 {
-    font-size: clamp(3rem, 6vw, 4.8rem);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 22px;
-}
-
-
-.home-intro {
-    max-width: 760px;
-
-    margin: 0 auto;
-
-    color: var(--muted);
-
-    font-size: 1.15rem;
-
-    line-height: 1.8;
-}
-
-
-/* =========================
-   HOME INFORMATION
-========================= */
-
-.home-info {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    margin: 42px auto 0;
-
-    max-width: 850px;
-
-    border-top: 1px solid var(--line);
-
-    border-bottom: 1px solid var(--line);
-}
-
-
-.home-info div {
-    padding: 20px 24px;
-
-    min-height: 105px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-
-.home-info div + div {
-    border-left: 1px solid var(--line);
-}
-
-
-.home-info span {
-    display: block;
-
-    color: var(--muted);
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    font-size: 0.75rem;
-
-    font-weight: 800;
-
-    margin-bottom: 7px;
-}
-
-
-.home-info strong {
-    font-size: 0.95rem;
-
-    font-weight: 600;
+    min-height: calc(100vh - 140px);
 }
 
 
@@ -313,21 +136,19 @@ main {
    BUTTONS
 ========================= */
 
-.home-buttons {
+.buttons {
     display: flex;
-
-    justify-content: center;
 
     gap: 14px;
 
-    margin-top: 32px;
+    margin-top: 30px;
 }
 
 
 .btn {
     display: inline-block;
 
-    padding: 12px 22px;
+    padding: 12px 20px;
 
     border-radius: 9px;
 
@@ -372,7 +193,7 @@ main {
 
 
 /* =========================
-   GENERAL CARDS
+   CARDS
 ========================= */
 
 .profile-card,
@@ -396,7 +217,6 @@ main {
 
 .avatar {
     width: 125px;
-
     height: 125px;
 
     border-radius: 50%;
@@ -419,41 +239,6 @@ main {
 
 .profile-card p {
     color: var(--muted);
-}
-
-
-.quick-info {
-    text-align: left;
-
-    margin-top: 24px;
-
-    border-top: 1px solid var(--line);
-
-    padding-top: 8px;
-}
-
-
-.quick-info div {
-    padding: 12px 0;
-
-    border-bottom: 1px solid var(--line);
-}
-
-
-.quick-info strong,
-.quick-info span {
-    display: block;
-}
-
-
-.quick-info strong {
-    font-size: 0.75rem;
-
-    text-transform: uppercase;
-
-    color: var(--muted);
-
-    letter-spacing: 1px;
 }
 
 
@@ -519,6 +304,8 @@ main {
 
 .card p {
     color: var(--muted);
+
+    margin-top: 8px;
 }
 
 
@@ -569,7 +356,7 @@ main {
 ========================= */
 
 .page-banner {
-    padding: 75px 24px;
+    padding: 45px 24px;
 
     text-align: center;
 
@@ -615,22 +402,47 @@ main {
 
 
 /* =========================
+   RESUME SKILLS
+========================= */
+
+.skill-list {
+    padding-left: 24px;
+
+    color: var(--muted);
+
+    margin: 0;
+}
+
+
+.skill-list li {
+    padding: 8px 0;
+
+    padding-left: 4px;
+}
+
+
+.skill-list li::marker {
+    color: var(--accent);
+}
+
+
+/* =========================
    RESUME
 ========================= */
 
 .resume-layout {
     display: grid;
 
-    grid-template-columns: 1fr;
+    grid-template-columns: 320px 1fr;
 
-    gap: 30px;
+    gap: 50px;
 }
 
 
 .resume-sidebar {
-    display: grid;
+    display: flex;
 
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
 
     gap: 20px;
 }
@@ -675,20 +487,21 @@ main {
 
 
 .resume-main {
-    padding: 0;
+    border-left: 2px solid var(--line);
+
+    padding-left: 34px;
 }
 
 
 .timeline-item {
     position: relative;
 
-    padding: 0 0 35px;
+    padding: 0 0 45px;
 }
 
 
 .timeline-dot {
     width: 13px;
-
     height: 13px;
 
     border-radius: 50%;
@@ -697,7 +510,7 @@ main {
 
     position: absolute;
 
-    left: -20px;
+    left: -41px;
 
     top: 7px;
 
@@ -858,7 +671,6 @@ footer {
         position: absolute;
 
         left: 0;
-
         right: 0;
 
         top: 72px;
@@ -887,81 +699,24 @@ footer {
     }
 
 
+    .hero,
     .grid.two,
     .grid.three,
-    .contact-grid,
-    .resume-sidebar {
+    .resume-layout,
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* HOME MOBILE */
+    .hero {
+        padding-top: 55px;
 
-    .home-profile {
         min-height: auto;
-
-        padding: 35px 16px;
     }
 
 
-    .home-card {
-        padding: 40px 22px;
-
-        border-radius: 18px;
-    }
-
-
-    .home-photo {
-        width: 140px;
-
-        height: 140px;
-    }
-
-
-    .home-card h1 {
-        font-size: 2.7rem;
-
-        letter-spacing: -1px;
-    }
-
-
-    .home-intro {
-        font-size: 1rem;
-    }
-
-
-    .home-info {
-        grid-template-columns: 1fr;
-
-        margin-top: 30px;
-    }
-
-
-    .home-info div {
-        min-height: auto;
-
-        padding: 17px 15px;
-    }
-
-
-    .home-info div + div {
-        border-left: 0;
-
-        border-top: 1px solid var(--line);
-    }
-
-
-    .home-buttons {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-
-    .home-buttons .btn {
-        width: 100%;
-
-        text-align: center;
+    .hero h1 {
+        letter-spacing: -2px;
     }
 
 
