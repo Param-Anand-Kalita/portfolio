@@ -1,129 +1,36 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    /* Current year */
-
-    const year = document.getElementById("year");
-
-    if (year) {
-        year.textContent = new Date().getFullYear();
-    }
-
-
-    /* Mobile navigation */
-
-    const menuButton =
-        document.querySelector(".menu-btn");
-
-    const navLinks =
-        document.querySelector(".nav-links");
-
-
-    if (menuButton && navLinks) {
-
-        menuButton.addEventListener("click", function () {
-
-            navLinks.classList.toggle("show");
-
-        });
-
-    }
-
-
-    /* Contact form validation */
-
-    const contactForm =
-        document.getElementById("contactForm");
-
-
-    if (contactForm) {
-
-        contactForm.addEventListener("submit", function (event) {
-
-            event.preventDefault();
-
-
-            /* Clear previous errors */
-
-            document.querySelectorAll(".error").forEach(function (error) {
-
-                error.textContent = "";
-
-            });
-
-
-            document.getElementById("successMessage").textContent = "";
-
-
-            /* Get input values */
-
-            const name =
-                document.getElementById("name").value.trim();
-
-            const email =
-                document.getElementById("email").value.trim();
-
-            const message =
-                document.getElementById("message").value.trim();
-
-
-            /* Email validation */
-
-            const emailPattern =
-                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-            let valid = true;
-
-
-            /* Validate name */
-
-            if (name.length < 2) {
-
-                document.getElementById("nameError").textContent =
-                    "Please enter your name.";
-
-                valid = false;
-
-            }
-
-
-            /* Validate email */
-
-            if (!emailPattern.test(email)) {
-
-                document.getElementById("emailError").textContent =
-                    "Please enter a valid email address.";
-
-                valid = false;
-
-            }
-
-
-            /* Validate message */
-
-            if (message.length < 10) {
-
-                document.getElementById("messageError").textContent =
-                    "Message must contain at least 10 characters.";
-
-                valid = false;
-
-            }
-
-
-            /* Success */
-
-            if (valid) {
-
-                document.getElementById("successMessage").textContent =
-                    "Thank you! Your message has been validated successfully.";
-
-                contactForm.reset();
-
-            }
-
-        });
-
-    }
-
+document.addEventListener("DOMContentLoaded", () => {
+  const $ = (id) => document.getElementById(id);
+  $("year").textContent = new Date().getFullYear();
+  const m = document.querySelector(".menu-btn"),
+    n = document.querySelector(".nav-links");
+  m.onclick = () => n.classList.toggle("show");
+  const f = $("contactForm");
+  if (f)
+    f.onsubmit = (e) => {
+      e.preventDefault();
+      document.querySelectorAll(".error").forEach((x) => (x.textContent = ""));
+      $("successMessage").textContent = "";
+      const name = $("name").value.trim(),
+        email = $("email").value.trim(),
+        message = $("message").value.trim();
+      let valid = true;
+      if (name.length < 2) {
+        $("nameError").textContent = "Please enter your name.";
+        valid = false;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        $("emailError").textContent = "Please enter a valid email address.";
+        valid = false;
+      }
+      if (message.length < 10) {
+        $("messageError").textContent =
+          "Message must contain at least 10 characters.";
+        valid = false;
+      }
+      if (valid) {
+        $("successMessage").textContent =
+          "Thank you! Your message has been validated successfully.";
+        f.reset();
+      }
+    };
 });
